@@ -1,0 +1,101 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>VitalFit — Trainers</title>
+
+  <!-- Fonts & Bootstrap -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- NAV -->
+  <nav class="navbar navbar-expand-lg">
+    <div class="container">
+      <a class="navbar-brand" href="index.html">VitalFit</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navMenu">
+        <ul class="navbar-nav ms-auto align-items-lg-center">
+          <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+          <li class="nav-item"><a class="nav-link active" href="trainers.html">Trainers</a></li>
+          <li class="nav-item"><a class="nav-link" href="schedule.html">Schedule</a></li>
+          <li class="nav-item"><a class="nav-link" href="register.html">Register</a></li>
+          <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- PAGE HEADER -->
+  <section class="hero" style="background-image:
+    linear-gradient(180deg, rgba(45,91,112,0.7), rgba(62,175,189,0.3)),
+    url('assets/images/trainers_bg.jpg');">
+    <div class="overlay"></div>
+    <div class="container text-center text-white">
+      <h1 class="display-5 fw-bold">Meet Our Trainers</h1>
+      <p class="lead">Experienced. Certified. Passionate about fitness.</p>
+    </div>
+  </section>
+
+  <!-- TRAINERS SECTION -->
+  <section class="py-5">
+    <div class="container">
+      <h2 class="section-title">Our Expert Team</h2>
+      <div class="row g-4">
+        
+        <div class="col-md-4">
+          <div class="trainer-card text-center position-relative">
+            <img src="trainer1.jpg" alt="Trainer 1">
+            <h5 class="mt-4 fw-bold">Shah Rukh</h5>
+            <p class="text-muted small mb-3">Strength & Conditioning Coach</p>
+            <p class="small">Helps you build endurance, balance, and body power with safe, guided workouts.</p>
+            <a href="register.html" class="btn btn-vital mt-2">Join Session</a>
+          </div>
+        </div>
+
+        <div class="col-md-4">
+          <div class="trainer-card text-center position-relative">
+            <img src="trainer2.jpg" alt="Trainer 2">
+            <h5 class="mt-4 fw-bold">Sofia Lim</h5>
+            <p class="text-muted small mb-3">Yoga & Flexibility Instructor</p>
+            <p class="small">Certified yoga expert focusing on mindfulness, flexibility, and inner strength.</p>
+            <a href="register.html" class="btn btn-vital mt-2">Join Session</a>
+          </div>
+        </div>
+
+        <div class="col-md-4">
+          <div class="trainer-card text-center position-relative">
+            <img src="trainer3.jpg" alt="Trainer 3">
+            <h5 class="mt-4 fw-bold">Alina Rodrigo</h5>
+            <p class="text-muted small mb-3">Zumba & Cardio Specialist</p>
+            <p class="small">Brings fun, rhythm, and energy to every Zumba class for all fitness levels.</p>
+            <a href="register.html" class="btn btn-vital mt-2">Join Session</a>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="site-footer">
+    <div class="container">
+      <p class="mb-0">© <span id="year-trainers"></span> VitalFit — Train hard. Stay strong.</p>
+    </div>
+  </footer>
+
+  <!-- JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  <script>
+    document.getElementById('year-trainers').textContent = new Date().getFullYear();
+  </script>
+
+</body>
+</html>

@@ -1,0 +1,127 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>VitalFit — Schedule</title>
+
+  <!-- Fonts & Bootstrap -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- NAV -->
+  <nav class="navbar navbar-expand-lg">
+    <div class="container">
+      <a class="navbar-brand" href="index.html">VitalFit</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navMenu">
+        <ul class="navbar-nav ms-auto align-items-lg-center">
+          <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="trainers.html">Trainers</a></li>
+          <li class="nav-item"><a class="nav-link active" href="schedule.html">Schedule</a></li>
+          <li class="nav-item"><a class="nav-link" href="register.html">Register</a></li>
+          <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- HERO -->
+  <section class="hero" style="background-image:
+    linear-gradient(180deg, rgba(45,91,112,0.7), rgba(62,175,189,0.3)),
+    url('schedule_bg.jpg');">
+    <div class="overlay"></div>
+    <div class="container text-center text-white">
+      <h1 class="display-5 fw-bold">Class Schedule</h1>
+      <p class="lead">Choose your favorite program and stay consistent.</p>
+    </div>
+  </section>
+
+  <!-- SCHEDULE SECTION -->
+  <section class="py-5">
+    <div class="container">
+      <h2 class="section-title">Weekly Timetable</h2>
+      <div class="table-responsive">
+        <table class="table table-bordered align-middle text-center">
+          <thead>
+            <tr>
+              <th>Time</th>
+              <th>Monday</th>
+              <th>Tuesday</th>
+              <th>Wednesday</th>
+              <th>Thursday</th>
+              <th>Friday</th>
+              <th>Saturday</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><strong>7:00 AM</strong></td>
+              <td>Yoga Flow 🧘‍♀️<br><small>Trainer: Sofia</small></td>
+              <td>HIIT Burn 🔥<br><small>Trainer: Marcus</small></td>
+              <td>Strength Training 💪<br><small>Trainer: Alex</small></td>
+              <td>Restorative Yoga 🌿<br><small>Trainer: Sofia</small></td>
+              <td>Cardio Core 💥<br><small>Trainer: Marcus</small></td>
+              <td class="table-info">Weekend Bootcamp ⚡<br><small>Trainer: Alex</small></td>
+            </tr>
+            <tr>
+              <td><strong>10:00 AM</strong></td>
+              <td>Pilates 🧘‍♀️</td>
+              <td>Zumba 💃</td>
+              <td>CrossFit 🏋️</td>
+              <td>Functional Fitness 💥</td>
+              <td>Stretch & Mobility 🤸</td>
+              <td class="table-info">Open Gym 🏋️</td>
+            </tr>
+            <tr>
+              <td><strong>5:00 PM</strong></td>
+              <td>Zumba 💃</td>
+              <td>BoxFit 🥊</td>
+              <td>Strength & Endurance 💪</td>
+              <td>HIIT Burn 🔥</td>
+              <td>Dance Fitness 🎶</td>
+              <td class="table-info">Weekend Yoga 🌅</td>
+            </tr>
+            <tr>
+              <td><strong>7:00 PM</strong></td>
+              <td>Evening Yoga 🧘‍♀️</td>
+              <td>Cardio Mix 💥</td>
+              <td>Pilates 🧘</td>
+              <td>CrossFit 🏋️</td>
+              <td>Rest Day 🌙</td>
+              <td class="table-info">Zumba Party 🎉</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="site-footer">
+    <div class="container">
+      <p class="mb-0">© <span id="year-schedule"></span> VitalFit — Train hard. Stay strong.</p>
+    </div>
+  </footer>
+
+  <!-- JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  <script>
+    document.getElementById('year-schedule').textContent = new Date().getFullYear();
+
+    // Parallax effect
+    window.addEventListener("scroll", function() {
+      const hero = document.querySelector(".hero");
+      let scroll = window.scrollY;
+      hero.style.backgroundPositionY = -(scroll * 0.3) + "px";
+    });
+  </script>
+</body>
+</html>

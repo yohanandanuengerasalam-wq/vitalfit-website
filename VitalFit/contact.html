@@ -1,0 +1,141 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>VitalFit — Contact</title>
+
+  <!-- Fonts & Bootstrap -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- NAV -->
+  <nav class="navbar navbar-expand-lg">
+    <div class="container">
+      <a class="navbar-brand" href="index.html">VitalFit</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navMenu">
+        <ul class="navbar-nav ms-auto align-items-lg-center">
+          <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="trainers.html">Trainers</a></li>
+          <li class="nav-item"><a class="nav-link" href="schedule.html">Schedule</a></li>
+          <li class="nav-item"><a class="nav-link" href="register.html">Register</a></li>
+          <li class="nav-item"><a class="nav-link active" href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- HERO -->
+  <section class="hero" style="background-image:
+    linear-gradient(180deg, rgba(45,91,112,0.7), rgba(62,175,189,0.3)),
+    url('contact_bg.jpg');">
+    <div class="overlay"></div>
+    <div class="container text-center text-white">
+      <h1 class="display-5 fw-bold">Get in Touch</h1>
+      <p class="lead">We’d love to hear from you! Reach out to VitalFit anytime.</p>
+    </div>
+  </section>
+
+  <!-- CONTACT FORM + INFO -->
+  <section class="py-5">
+    <div class="container">
+      <h2 class="section-title">Contact Us</h2>
+      <div class="row g-4 align-items-start">
+
+        <!-- Contact Form -->
+        <div class="col-md-6">
+          <form class="form-card shadow-sm" id="contactForm">
+            <div class="mb-3">
+              <label for="name" class="form-label">Full Name</label>
+              <input type="text" class="form-control" id="name" placeholder="Enter your full name" required>
+            </div>
+
+            <div class="mb-3">
+              <label for="email" class="form-label">Email Address</label>
+              <input type="email" class="form-control" id="email" placeholder="example@email.com" required>
+            </div>
+
+            <div class="mb-3">
+              <label for="message" class="form-label">Your Message</label>
+              <textarea class="form-control" id="message" rows="4" placeholder="How can we help you?" required></textarea>
+            </div>
+
+            <button type="submit" class="btn btn-vital w-100 mt-3">Send Message</button>
+          </form>
+
+          <!-- Success Message -->
+          <div class="alert alert-success mt-4 d-none" id="contactSuccess">
+            ✅ Your message has been sent! We’ll get back to you soon.
+          </div>
+        </div>
+
+        <!-- Contact Info -->
+        <div class="col-md-6">
+          <div class="p-3">
+            <h5 class="fw-bold" style="color:var(--ocean-3);">Our Studio</h5>
+            <p class="small mb-1">🏋️‍♀️ VitalFit Fitness Studio</p>
+            <p class="small mb-1">123 Ocean Drive, Kuala Lumpur, Malaysia</p>
+            <p class="small mb-3">📞 +60 12-345 6789 | ✉️ info@vitalfit.com</p>
+
+            <h6 class="fw-bold mt-4" style="color:var(--ocean-3);">Operating Hours</h6>
+            <p class="small mb-1">Mon – Fri: 7:00 AM – 9:00 PM</p>
+            <p class="small mb-3">Sat – Sun: 8:00 AM – 6:00 PM</p>
+
+            <!-- Google Map Embed -->
+            <div class="ratio ratio-16x9 mt-3 rounded shadow-sm overflow-hidden">
+              <iframe 
+                src="https://www.google.com/maps?q=Kuala+Lumpur,+Malaysia&output=embed"
+                style="border:0;"
+                allowfullscreen=""
+                loading="lazy">
+              </iframe>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="site-footer">
+    <div class="container">
+      <p class="mb-0">© <span id="year-contact"></span> VitalFit — Train hard. Stay strong.</p>
+    </div>
+  </footer>
+
+  <!-- JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  <script>
+    document.getElementById('year-contact').textContent = new Date().getFullYear();
+
+    // Contact form validation
+    const contactForm = document.getElementById('contactForm');
+    const contactSuccess = document.getElementById('contactSuccess');
+
+    contactForm.addEventListener('submit', (e) => {
+      e.preventDefault();
+      if (contactForm.checkValidity()) {
+        contactForm.reset();
+        contactSuccess.classList.remove('d-none');
+        window.scrollTo({ top: contactSuccess.offsetTop - 100, behavior: 'smooth' });
+      }
+    });
+
+    // Parallax effect
+    window.addEventListener("scroll", function() {
+      const hero = document.querySelector(".hero");
+      let scroll = window.scrollY;
+      hero.style.backgroundPositionY = -(scroll * 0.3) + "px";
+    });
+  </script>
+</body>
+</html>
